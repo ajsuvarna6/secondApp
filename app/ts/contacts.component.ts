@@ -16,7 +16,8 @@ export class ContactsComponent implements OnInit {
 
   ngOnInit():any {
     this.allContacts=this.storageService.getContacts();
-    this.selectContact=this.allContacts[0];
+    this.storageService.retrieveContacts().then( data => { console.log(data) } );
+    //this.allContacts=data; this.selectContact=this.allContacts[0];
   }
 
   onSelect(cont:Contact) {

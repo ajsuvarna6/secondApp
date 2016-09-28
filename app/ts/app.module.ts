@@ -5,11 +5,11 @@ import { CreateContactComponent }  from "./createContact.component";
 import { ContactsComponent } from "./contacts.component";
 import { StorageService } from "./storage.service";
 import { routing } from './app.routing';
-import { FormsModule }   from '@angular/forms'
-
+import { FormsModule }   from '@angular/forms';
+import { HttpModule }    from '@angular/http';
 
 @NgModule({
-  imports: [ BrowserModule, FormsModule, routing ],
+  imports: [ BrowserModule, FormsModule, HttpModule, routing ],
   declarations: [ AppComponent, CreateContactComponent, ContactsComponent ],
   providers: [ StorageService ],
   bootstrap: [ AppComponent ]
