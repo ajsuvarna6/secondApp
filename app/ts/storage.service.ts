@@ -9,19 +9,25 @@ import 'rxjs/add/operator/toPromise';
 export class StorageService {
   AllContacts:Contact[]=[];
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) { this.retrieveContacts(); }
 
-  retrieveContacts(): Promise<Contact[]> {
-    this.http.get("./resources/resource.json")
+  retrieveContacts(): Promise<any> {
+    return this.http.get("./resources/resource.json")
      .toPromise()
-     .then( response => { return response.json(); } )
-     .catch( error => { return error.json(); } );
+     .then( response => { this.AllContacts=response.json(); return response.json();  } )
+     .catch( error => { console.log(error.json()); return error.json(); } );
   }
 
-  getContacts():Contact[] {
-    return Contacts;
+  getContacts():Promise<any[]> {
+    if(this.AllContacts.length > 0) {
+      return Promise.resolve(this.AllContacts);
+    }
+    else {
+      return this.retrieveContacts();
+    }
   }
   createContact(contact) {
-    Contacts.push(contact);
+    console.log('all:',this.AllContacts,"new: ",contact);
+    this.AllContacts.push(contact);
   }
 }
