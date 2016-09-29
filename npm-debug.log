@@ -1,36 +1,35 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
-1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli [ '/home/techjini/.nvm/v5.10.1/bin/node',
+1 verbose cli   '/home/techjini/.nvm/v5.10.1/bin/npm',
 1 verbose cli   'start' ]
-2 info using npm@3.9.3
-3 info using node@v6.2.1
+2 info using npm@3.9.2
+3 info using node@v5.10.1
 4 verbose run-script [ 'prestart', 'start', 'poststart' ]
 5 info lifecycle angular-quickstart@1.0.0~prestart: angular-quickstart@1.0.0
 6 silly lifecycle angular-quickstart@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle angular-quickstart@1.0.0~start: angular-quickstart@1.0.0
 8 verbose lifecycle angular-quickstart@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle angular-quickstart@1.0.0~start: PATH: C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;D:\CompanyProjects\angular2\secondApp\node_modules\.bin;C:\Program Files\nodejs;C:\Users\ajsuv\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\ajsuv\bin;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Skype\Phone;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin;C:\Users\ajsuv\AppData\Roaming\npm;C:\Users\ajsuv\AppData\Local\atom\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
-10 verbose lifecycle angular-quickstart@1.0.0~start: CWD: D:\CompanyProjects\angular2\secondApp
-11 silly lifecycle angular-quickstart@1.0.0~start: Args: [ '/d /s /c',
-11 silly lifecycle   'tsc && concurrently "npm run tsc:w" "npm run lite" ' ]
+9 verbose lifecycle angular-quickstart@1.0.0~start: PATH: /home/techjini/.nvm/v5.10.1/lib/node_modules/npm/bin/node-gyp-bin:/home/techjini/projects/angular2/secondApp/node_modules/.bin:/home/techjini/.nvm/v5.10.1/bin:/home/techjini/bin:/home/techjini/bin/Sencha/Cmd/6.1.2.15/..:/home/techjini/.nvm/v5.10.1/bin:/home/techjini/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/java/jre/bin:/usr/local/java/jdk1.8.0_51/bin:/usr/local/java/jre/bin:/usr/local/java/jdk1.8.0_51/bin:/usr/local/java/jre/bin:/usr/local/java/jdk1.8.0_51/bin:/usr/local/java/jre/bin:/usr/local/java/jdk1.8.0_51/bin:/usr/local/java/jre/bin:/usr/local/java/jdk1.8.0_51/bin:/usr/local/java/jre/bin:/usr/local/java/jdk1.8.0_51/bin:/usr/local/java/jre/bin:/usr/local/java/jdk1.8.0_51/bin:/usr/local/java/jre/bin:/usr/local/java/jdk1.8.0_51/bin:/usr/local/java/jre/bin:/usr/local/java/jdk1.8.0_51/bin:/usr/local/java/jre/bin:/usr/local/java/jdk1.8.0_51/bin:/home/techjini/Android/Sdk/bin
+10 verbose lifecycle angular-quickstart@1.0.0~start: CWD: /home/techjini/projects/angular2/secondApp
+11 silly lifecycle angular-quickstart@1.0.0~start: Args: [ '-c', 'tsc && concurrently "npm run tsc:w" "npm run lite" ' ]
 12 silly lifecycle angular-quickstart@1.0.0~start: Returned: code: 2  signal: null
 13 info lifecycle angular-quickstart@1.0.0~start: Failed to exec start script
 14 verbose stack Error: angular-quickstart@1.0.0 start: `tsc && concurrently "npm run tsc:w" "npm run lite" `
 14 verbose stack Exit status 2
-14 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:245:16)
-14 verbose stack     at emitTwo (events.js:106:13)
-14 verbose stack     at EventEmitter.emit (events.js:191:7)
-14 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
-14 verbose stack     at emitTwo (events.js:106:13)
-14 verbose stack     at ChildProcess.emit (events.js:191:7)
-14 verbose stack     at maybeClose (internal/child_process.js:852:16)
+14 verbose stack     at EventEmitter.<anonymous> (/home/techjini/.nvm/v5.10.1/lib/node_modules/npm/lib/utils/lifecycle.js:245:16)
+14 verbose stack     at emitTwo (events.js:100:13)
+14 verbose stack     at EventEmitter.emit (events.js:185:7)
+14 verbose stack     at ChildProcess.<anonymous> (/home/techjini/.nvm/v5.10.1/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+14 verbose stack     at emitTwo (events.js:100:13)
+14 verbose stack     at ChildProcess.emit (events.js:185:7)
+14 verbose stack     at maybeClose (internal/child_process.js:850:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
 15 verbose pkgid angular-quickstart@1.0.0
-16 verbose cwd D:\CompanyProjects\angular2\secondApp
-17 error Windows_NT 10.0.10586
-18 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start"
-19 error node v6.2.1
-20 error npm  v3.9.3
+16 verbose cwd /home/techjini/projects/angular2/secondApp
+17 error Linux 4.2.0-30-generic
+18 error argv "/home/techjini/.nvm/v5.10.1/bin/node" "/home/techjini/.nvm/v5.10.1/bin/npm" "start"
+19 error node v5.10.1
+20 error npm  v3.9.2
 21 error code ELIFECYCLE
 22 error angular-quickstart@1.0.0 start: `tsc && concurrently "npm run tsc:w" "npm run lite" `
 22 error Exit status 2
