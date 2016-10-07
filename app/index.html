@@ -16,9 +16,11 @@
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <!-- 2. Configure SystemJS -->
     <script src="systemjs.config.js"></script>
+    <!-- <script src="//apis.google.com/js/platform.js" defer async></script> -->
     <script>
-    System.import('app').catch(function(err){ console.error(err); });
+      System.import('app').catch(function(err){ console.error(err); });
     </script>
+    <script src="https://apis.google.com/js/client.js"></script>
   </head>
   <!-- 3. Display the application -->
   <body>
