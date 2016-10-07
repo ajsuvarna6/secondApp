@@ -1,28 +1,43 @@
-import { Injectable } from '@angular/core';
-import { Contact } from './contact';
-import { Contacts } from './mock-contacts';
-import { Headers, Http } from '@angular/http';
-import 'rxjs/add/operator/toPromise';
+import { Injectable }     from '@angular/core';
+import { Contact }        from './contact';
+import { Contacts }       from './mock-contacts';
+import { Headers, Http }  from '@angular/http';
+import { Observable }     from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/from';
 
 @Injectable()
 
 export class StorageService {
-  AllContacts:Contact[]=[];
+  AllContacts:any[]=[];
+
+  headers:Object= {
+   "Accept-Language": "en-US,en;q=0.8",
+   "Host": "headers.jsontest.com",
+   "Accept-Charset": "ISO-8859-1,utf-8;q=0.7,*;q=0.3",
+   "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+  }
 
   constructor(private http: Http) { this.retrieveContacts(); }
 
-  retrieveContacts(): Promise<any> {
+  retrieveContacts(): Observable<Contact[]> {
     return this.http.get("./resources/resource.json")
-     .toPromise()
-     .then( response => { this.AllContacts=response.json(); return response.json();  } )
-     .catch( error => { console.log(error.json()); return error.json(); } );
+      .map(res => { this.AllContacts=res.json(); return res.json(); } )
+      .catch( error => { return error.json(); } );
   }
 
-  getContacts():Promise<any[]> {
+  getCurrentTime() {
+
+  }
+
+  getContacts(): Observable<Contact[]> {
+    console.log("All:",this.AllContacts);
     if(this.AllContacts.length > 0) {
-      return Promise.resolve(this.AllContacts);
+      return this.AllContacts;
     }
     else {
+      console.log('aaas');
       return this.retrieveContacts();
     }
   }

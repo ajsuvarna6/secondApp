@@ -5,6 +5,7 @@ import { StorageService } from "./storage.service";
 //moduleId: module.id,
   selector: 'home',
   templateUrl: './views/createContact.component.html'
+  // providers: [StorageService]
 })
 
 export class CreateContactComponent {
